@@ -70,13 +70,12 @@ public class Order implements Serializable {
         }
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Order)) return false;
         Order order = (Order) o;
-        return getId().equals(order.getId());
+        return Objects.equals(getId(), order.getId());
     }
 
     @Override
