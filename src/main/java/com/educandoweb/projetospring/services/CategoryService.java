@@ -11,14 +11,14 @@ import java.util.Optional;
 @Service
 public class CategoryService {
     @Autowired
-    private CategoryRepository orderRepository;
+    private CategoryRepository categoryRepository;
 
     public List<Category> findAll() {
-        return orderRepository.findAll();
+        return categoryRepository.findAll();
     }
 
     public Category findById(Long id) {
-        Optional<Category> order = orderRepository.findById(id);
+        Optional<Category> order = categoryRepository.findById(id);
         return order.get();
     }
 }
