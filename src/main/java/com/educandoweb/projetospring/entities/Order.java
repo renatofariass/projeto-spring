@@ -65,7 +65,7 @@ public class Order implements Serializable {
         this.client = client;
     }
 
-    @JsonIgnore
+
     public Set<OrderItem> getItems() {
         return items;
     }
